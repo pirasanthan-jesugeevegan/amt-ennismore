@@ -1,4 +1,4 @@
-name: Docker Build
+name: Docker Build, Push, Pull, Run Test & Publish to S3 bucket
 on:
   push:
     branches: ['master']
@@ -26,3 +26,38 @@ jobs:
         run: |
           chmod +x ./build-push.sh
           ./build-push.sh
+
+  Cypress:
+    name: Pull Docker Image and Run test
+    needs: Docker
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{secrets.AWS_REGION}}
+
+      - name: Login to Amazon ECR registry
+        id: login
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Pull Docker image from Amazon ECR
+        run: docker pull ${ECR_REGISTRY}/ennismore:latest
+        env:
+          ECR_REGISTRY: ${{ steps.login.outputs.registry }}
+
+      - name: Install npm dependencies
+        run: yarn install
+
+      - name: Run Test, Generate Report & Upload to S3
+        run: |
+          chmod +x ./run.sh
+          ./run.sh
+        env:
+          ECR_REGISTRY: ${{ steps.login.outputs.registry }}
