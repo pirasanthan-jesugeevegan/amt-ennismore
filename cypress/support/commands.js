@@ -23,3 +23,13 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('getValue', (element) => {
+  cy.get(element).invoke('text');
+});
+Cypress.Commands.add('getHref', (element) => {
+  cy.get(element).invoke('attr', 'href');
+});
+Cypress.Commands.add('clickElement', (element) => {
+  cy.get(element).should('be.visible').click();
+});

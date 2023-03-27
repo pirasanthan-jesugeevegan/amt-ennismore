@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run --headless"
+    "cypress:run": "cypress run --headless --browser chrome"
   },
   "repository": {
     "type": "git",

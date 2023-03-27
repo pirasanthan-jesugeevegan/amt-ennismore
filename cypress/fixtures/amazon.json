@@ -1,0 +1,17 @@
+{
+  "reject_cookie_btn": "#sp-cc-rejectall-link",
+  "search_input_field": "#twotabsearchtextbox",
+  "search_btn": "#nav-search-submit-button",
+  "search_result_component": "[data-component-type=s-search-result]",
+  "search_result_component_image": "[data-component-type=s-product-image] > a",
+  "sponsored_result": ".AdHolder",
+  "prime_icon": ".a-icon-prime",
+  "add_to_cart_btn": "#add-to-cart-button",
+  "warranty_panel": "#attach-warranty-pane",
+  "decline_warranty_plan_btn": "[aria-labelledby=attachSiNoCoverage-announce]",
+  "clone_warranty_plan_btn": "#attach-close_sideSheet-link",
+  "nav_basket_btn": "#nav-cart",
+  "basket_item_list": ".sc-list-item",
+  "basket_total_price": ".sc-buy-box-inner-box > .a-spacing-mini",
+  "process_to_checkout_btn": "[data-feature-id=proceed-to-checkout-action]"
+}
