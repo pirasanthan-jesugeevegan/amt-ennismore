@@ -1,0 +1,8 @@
+node_modules
+
+# cypress folders 
+cypress/.run
+cypress/reports
+cypress/screenshots
+cypress/videos
+cypress/downloads

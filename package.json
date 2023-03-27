@@ -1,0 +1,23 @@
+{
+  "name": "ennismore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pirasanthan-jesugeevegan/amt-ennismore.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pirasanthan-jesugeevegan/amt-ennismore/issues"
+  },
+  "homepage": "https://github.com/pirasanthan-jesugeevegan/amt-ennismore#readme",
+  "devDependencies": {
+    "cypress": "^12.8.1"
+  }
+}
