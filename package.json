@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run --headless --browser chrome"
+    "cypress:run": "cypress run --headless"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/pirasanthan-jesugeevegan/amt-ennismore#readme",
   "devDependencies": {
-    "cypress": "^10.4.0",
+    "cypress": "^12.8.0",
     "cypress-cucumber-preprocessor": "4.3.1",
     "multiple-cucumber-html-reporter": "^1.18.0",
     "path": "^0.12.7"
