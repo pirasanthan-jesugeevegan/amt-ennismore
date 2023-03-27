@@ -4,20 +4,37 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --headless"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pirasanthan-jesugeevegan/amt-ennismore.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Pirasanthan Jesugeevegan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/pirasanthan-jesugeevegan/amt-ennismore/issues"
   },
   "homepage": "https://github.com/pirasanthan-jesugeevegan/amt-ennismore#readme",
   "devDependencies": {
-    "cypress": "^12.8.1"
+    "cypress": "^10.4.0",
+    "cypress-cucumber-preprocessor": "4.3.1",
+    "multiple-cucumber-html-reporter": "^1.18.0",
+    "path": "^0.12.7"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "fs-extra": "^10.1.0"
   }
 }
